@@ -102,12 +102,14 @@ class MainView : View("Mall Builder") {
         if (availableRecipes.size == 1) {
             return availableRecipes.single()
         }
-        println("For item '$item' there are multiple recipes available, please choose one from below:")
-        availableRecipes.forEachIndexed { index, recipe ->
-            println("#$index ${recipe.name}: ${recipe.formatSimple()}")
-        }
-        val choice = readLine()!!.toInt()
-        val chosenRecipe = availableRecipes[choice]
+        val dialog = find<ChooseRecipeDialog>(
+            mapOf(
+                ChooseRecipeDialog::item to item,
+                ChooseRecipeDialog::recipes to availableRecipes
+            )
+        )
+        dialog.openModal(block = true)
+        val chosenRecipe = dialog.chosenRecipe!!
         preferredRecipe.add(chosenRecipe)
         return chosenRecipe
     }
