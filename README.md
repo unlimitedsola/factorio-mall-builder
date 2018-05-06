@@ -1,3 +1,3 @@
 # Mall Builder
 
-![screenshot](screenshot.png)
+![screenshot](screenshot.gif)
