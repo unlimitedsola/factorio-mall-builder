@@ -5,9 +5,9 @@ data class Product(
     val amount_min: Int?, val amount_max: Int?, val probability: Int?
 ) {
     fun formatSimple(): String = if (amount != null) {
-        "${name}x$amount"
+        "$name x $amount"
     } else {
-        "${name}x[$amount_min~$amount_max]"
+        "$name x $amount_min-$amount_max"
     }
 }
 
