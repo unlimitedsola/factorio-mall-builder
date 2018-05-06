@@ -1,7 +1,9 @@
 package love.sola.factorio.mallbuilder
 
 import javafx.beans.property.SimpleListProperty
+import javafx.embed.swing.SwingFXUtils
 import javafx.scene.Parent
+import javafx.scene.image.ImageView
 import javafx.scene.input.KeyCode
 import javafx.scene.layout.Priority
 import tornadofx.*
@@ -83,6 +85,12 @@ class MainView : View("Mall Builder") {
                 gridpaneColumnConstraints {
                     percentWidth = 20.0
                     hgrow = Priority.ALWAYS
+                }
+                button("Visualize") {
+                    action {
+                        find<ImagePopup>(mapOf(ImagePopup::image to genDAG(selectedRecipes)))
+                            .openModal()
+                    }
                 }
                 label(preferredRecipe.sizeProperty.stringBinding { "Preferred Recipes: $it" })
                 listview(preferredRecipe) {
