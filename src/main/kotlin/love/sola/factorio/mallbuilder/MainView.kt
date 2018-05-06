@@ -20,58 +20,78 @@ class MainView : View("Mall Builder") {
         }
     }
 
-    override val root: Parent = hbox(spacing = 20) {
-        vbox {
-            label(ingredientsProperty.sizeProperty.stringBinding { "Ingredients: $it" })
-            label("Format: name (used times by recipes) (size change if remove)")
-            listview(ingredientsProperty) {
-                vgrow = Priority.ALWAYS
-                cellFormat {
-                    text = it.second
-                    setOnMouseClicked { _ ->
-                        selectedRecipes.add(chooseRecipe(it.first))
-                    }
+    override val root: Parent = gridpane {
+        hgap = 10.0
+        padding = tornadofx.insets(10)
+        row {
+            constraintsForRow(0).vgrow = Priority.ALWAYS
+            vbox {
+                gridpaneColumnConstraints {
+                    percentWidth = 40.0
+                    hgrow = Priority.ALWAYS
                 }
-            }
-        }
-        vbox {
-            label(selectedRecipes.sizeProperty.stringBinding { "Chosen Recipes: $it" })
-            hbox(spacing = 10) {
-                val searchBar =
-                    combobox<String>(values = recipes.flatMap { it.value.products.map { it.name } }.observable()) {
-                        hgrow = Priority.ALWAYS
-                        maxWidth = Double.MAX_VALUE
-                        makeAutocompletable()
-                        setOnKeyPressed {
-                            if (it.code == KeyCode.ENTER) {
-                                selectedRecipes.add(chooseRecipe(value))
-                            }
+                label(ingredientsProperty.sizeProperty.stringBinding { "Ingredients: $it" })
+                label("Format: name (used times by recipes) (size change if remove)")
+                listview(ingredientsProperty) {
+                    vgrow = Priority.ALWAYS
+                    cellFormat {
+                        text = it.second
+                        setOnMouseClicked { _ ->
+                            selectedRecipes.add(chooseRecipe(it.first))
                         }
                     }
-                button("+") {
-                    action {
-                        selectedRecipes.add(chooseRecipe(searchBar.value))
+                }
+            }
+            vbox {
+                gridpaneColumnConstraints {
+                    percentWidth = 40.0
+                    hgrow = Priority.ALWAYS
+                }
+                label(selectedRecipes.sizeProperty.stringBinding { "Chosen Recipes: $it" })
+                hbox(spacing = 10) {
+                    val searchBar =
+                        combobox<String>(values = recipes.flatMap { it.value.products.map { it.name } }.observable()) {
+                            hgrow = Priority.ALWAYS
+                            maxWidth = Double.MAX_VALUE
+                            makeAutocompletable()
+                            setOnKeyPressed {
+                                if (it.code == KeyCode.ENTER) {
+                                    selectedRecipes.add(chooseRecipe(value))
+                                }
+                            }
+                            runLater {
+                                requestFocus()
+                            }
+                        }
+                    button("+") {
+                        action {
+                            selectedRecipes.add(chooseRecipe(searchBar.value))
+                        }
+                    }
+                }
+                listview<Recipe>(selectedRecipes) {
+                    vgrow = Priority.ALWAYS
+                    cellFormat {
+                        text = it.products.joinToString(separator = ", ") { it.name }
+                        setOnMouseClicked { _ ->
+                            selectedRecipes.remove(it)
+                        }
                     }
                 }
             }
-            listview<Recipe>(selectedRecipes) {
-                vgrow = Priority.ALWAYS
-                cellFormat {
-                    text = it.products.joinToString(separator = ", ") { it.name }
-                    setOnMouseClicked { _ ->
-                        selectedRecipes.remove(it)
-                    }
+            vbox {
+                gridpaneColumnConstraints {
+                    percentWidth = 20.0
+                    hgrow = Priority.ALWAYS
                 }
-            }
-        }
-        vbox {
-            label(preferredRecipe.sizeProperty.stringBinding { "Preferred Recipes: $it" })
-            listview(preferredRecipe) {
-                vgrow = Priority.ALWAYS
-                cellFormat {
-                    text = "${it.name}: ${it.formatSimple()}"
-                    setOnMouseClicked { _ ->
-                        preferredRecipe.remove(it)
+                label(preferredRecipe.sizeProperty.stringBinding { "Preferred Recipes: $it" })
+                listview(preferredRecipe) {
+                    vgrow = Priority.ALWAYS
+                    cellFormat {
+                        text = "${it.name}: ${it.formatSimple()}"
+                        setOnMouseClicked { _ ->
+                            preferredRecipe.remove(it)
+                        }
                     }
                 }
             }

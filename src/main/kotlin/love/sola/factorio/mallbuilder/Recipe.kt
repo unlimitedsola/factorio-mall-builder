@@ -10,6 +10,6 @@ data class Recipe(
     val energy: Double
 ) {
     fun formatSimple() =
-        "${ingredients.map { it.formatSimple() }} -> ${products.map { it.formatSimple() }}"
+        "${ingredients.joinToString(separator = ",") { it.formatSimple() }} -> ${products.map { it.formatSimple() }}"
 }
 
