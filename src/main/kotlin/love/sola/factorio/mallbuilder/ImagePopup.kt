@@ -4,6 +4,7 @@ import javafx.embed.swing.SwingFXUtils
 import javafx.scene.Parent
 import javafx.scene.image.Image
 import javafx.scene.input.DataFormat
+import javafx.scene.layout.Region
 import javafx.stage.FileChooser
 import tornadofx.*
 import javax.imageio.ImageIO
@@ -15,6 +16,8 @@ class ImagePopup : Fragment() {
             imageview(image) {
                 isPreserveRatio = true
                 fitToParentSize()
+                fitWidthProperty().bind((parent as Region).widthProperty())
+                fitHeightProperty().bind((parent as Region).heightProperty())
                 contextmenu {
                     item("Copy") {
                         action {
