@@ -16,7 +16,11 @@ class MainView : View("Mall Builder") {
         selectedRecipes.onChange {
             val ingredients = flatIngredients(selectedRecipes).entries.sortedBy { it.value }
             value = ingredients.map {
-                val profit = flatIngredients(selectedRecipes + chooseRecipe(it.key)).size - ingredients.size
+                val profit = try {
+                    flatIngredients(selectedRecipes + chooseRecipe(it.key)).size - ingredients.size
+                } catch (e: Exception) {
+                    "-"
+                }
                 it.key to "${it.key} (${it.value}) ($profit)"
             }.observable()
         }
