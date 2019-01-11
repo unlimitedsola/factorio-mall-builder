@@ -73,7 +73,7 @@ class MainView : View("Mall Builder") {
                         }
                     }
                 }
-                listview<Recipe>(selectedRecipes) {
+                listview(selectedRecipes) {
                     vgrow = Priority.ALWAYS
                     cellFormat {
                         text = it.products.joinToString(separator = ", ") { it.name }
