@@ -11,7 +11,7 @@ class ChooseRecipeDialog : Fragment() {
     var chosenRecipe: Recipe? = null
 
     override val root: Parent = vbox(alignment = Pos.CENTER) {
-        label("For item '$item' there are multiple recipes available, please choose one from below:")
+        label("For item '$item' there are multiple recipes available, please choose one of them from below:")
         val recipeList = listview(recipes.observable()) {
             cellFormat {
                 text = "${it.name}: ${it.formatSimple()}"
