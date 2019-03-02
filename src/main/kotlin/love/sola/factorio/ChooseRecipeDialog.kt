@@ -1,7 +1,8 @@
-package love.sola.factorio.mallbuilder
+package love.sola.factorio
 
 import javafx.geometry.Pos
 import javafx.scene.Parent
+import love.sola.factorio.data.Recipe
 import tornadofx.*
 
 class ChooseRecipeDialog : Fragment() {

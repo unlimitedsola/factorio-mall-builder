@@ -1,4 +1,4 @@
-package love.sola.factorio.mallbuilder
+package love.sola.factorio
 
 import javafx.embed.swing.SwingFXUtils
 import javafx.scene.Parent

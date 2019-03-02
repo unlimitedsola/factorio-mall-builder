@@ -260,8 +260,8 @@
     "ingredients": [
       {
         "type": "item",
-        "amount": 2,
-        "name": "steel-plate"
+        "amount": 9,
+        "name": "iron-plate"
       },
       {
         "type": "item",
@@ -327,8 +327,8 @@
       },
       {
         "type": "item",
-        "amount": 10,
-        "name": "rocket-control-unit"
+        "amount": 20,
+        "name": "processing-unit"
       },
       {
         "type": "item",
@@ -339,32 +339,6 @@
     "hidden": false,
     "energy": 50,
     "order": "d[rocket-launcher]-c[atomic-bomb]"
-  },
-  "automation-science-pack": {
-    "name": "automation-science-pack",
-    "category": "crafting",
-    "products": [
-      {
-        "type": "item",
-        "name": "automation-science-pack",
-        "amount": 1
-      }
-    ],
-    "ingredients": [
-      {
-        "type": "item",
-        "amount": 1,
-        "name": "copper-plate"
-      },
-      {
-        "type": "item",
-        "amount": 1,
-        "name": "iron-gear-wheel"
-      }
-    ],
-    "hidden": false,
-    "energy": 5,
-    "order": "a[automation-science-pack]"
   },
   "battery": {
     "name": "battery",
@@ -394,7 +368,7 @@
       }
     ],
     "hidden": false,
-    "energy": 4,
+    "energy": 5,
     "order": "h[battery]"
   },
   "battery-equipment": {
@@ -436,13 +410,8 @@
     "ingredients": [
       {
         "type": "item",
-        "amount": 15,
+        "amount": 20,
         "name": "processing-unit"
-      },
-      {
-        "type": "item",
-        "amount": 5,
-        "name": "low-density-structure"
       },
       {
         "type": "item",
@@ -490,32 +459,6 @@
     "energy": 15,
     "order": "a[beacon]"
   },
-  "belt-immunity-equipment": {
-    "name": "belt-immunity-equipment",
-    "category": "crafting",
-    "products": [
-      {
-        "type": "item",
-        "name": "belt-immunity-equipment",
-        "amount": 1
-      }
-    ],
-    "ingredients": [
-      {
-        "type": "item",
-        "amount": 10,
-        "name": "steel-plate"
-      },
-      {
-        "type": "item",
-        "amount": 5,
-        "name": "advanced-circuit"
-      }
-    ],
-    "hidden": false,
-    "energy": 10,
-    "order": "e[belt-immunity]-a[belt-immunity]"
-  },
   "big-electric-pole": {
     "name": "big-electric-pole",
     "category": "crafting",
@@ -536,11 +479,6 @@
         "type": "item",
         "amount": 5,
         "name": "steel-plate"
-      },
-      {
-        "type": "item",
-        "amount": 8,
-        "name": "iron-stick"
       }
     ],
     "hidden": false,
@@ -795,37 +733,6 @@
     "energy": 5,
     "order": "e[chemical-plant]"
   },
-  "chemical-science-pack": {
-    "name": "chemical-science-pack",
-    "category": "crafting",
-    "products": [
-      {
-        "type": "item",
-        "name": "chemical-science-pack",
-        "amount": 2
-      }
-    ],
-    "ingredients": [
-      {
-        "type": "item",
-        "amount": 1,
-        "name": "solid-fuel"
-      },
-      {
-        "type": "item",
-        "amount": 3,
-        "name": "advanced-circuit"
-      },
-      {
-        "type": "item",
-        "amount": 2,
-        "name": "engine-unit"
-      }
-    ],
-    "hidden": false,
-    "energy": 24,
-    "order": "d[chemical-science-pack]"
-  },
   "cliff-explosives": {
     "name": "cliff-explosives",
     "category": "crafting",
@@ -1046,7 +953,7 @@
       }
     ],
     "hidden": false,
-    "energy": 3.2,
+    "energy": 3.5,
     "order": "c[copper-plate]"
   },
   "decider-combinator": {
@@ -1093,8 +1000,8 @@
       },
       {
         "type": "item",
-        "amount": 1,
-        "name": "flying-robot-frame"
+        "amount": 2,
+        "name": "electronic-circuit"
       },
       {
         "type": "item",
@@ -1503,13 +1410,8 @@
     "ingredients": [
       {
         "type": "item",
-        "amount": 5,
+        "amount": 10,
         "name": "processing-unit"
-      },
-      {
-        "type": "item",
-        "amount": 5,
-        "name": "low-density-structure"
       },
       {
         "type": "item",
@@ -1694,7 +1596,7 @@
       }
     ],
     "hidden": false,
-    "energy": 4,
+    "energy": 5,
     "order": "j[explosives]"
   },
   "express-loader": {
@@ -2186,13 +2088,8 @@
     "ingredients": [
       {
         "type": "item",
-        "amount": 200,
+        "amount": 250,
         "name": "processing-unit"
-      },
-      {
-        "type": "item",
-        "amount": 50,
-        "name": "low-density-structure"
       }
     ],
     "hidden": false,
@@ -2417,6 +2314,42 @@
     "energy": 8,
     "order": "b[heavy-armor]"
   },
+  "high-tech-science-pack": {
+    "name": "high-tech-science-pack",
+    "category": "crafting",
+    "products": [
+      {
+        "type": "item",
+        "name": "high-tech-science-pack",
+        "amount": 2
+      }
+    ],
+    "ingredients": [
+      {
+        "type": "item",
+        "amount": 1,
+        "name": "battery"
+      },
+      {
+        "type": "item",
+        "amount": 30,
+        "name": "copper-cable"
+      },
+      {
+        "type": "item",
+        "amount": 3,
+        "name": "processing-unit"
+      },
+      {
+        "type": "item",
+        "amount": 1,
+        "name": "speed-module"
+      }
+    ],
+    "hidden": false,
+    "energy": 14,
+    "order": "f[high-tech-science-pack]"
+  },
   "inserter": {
     "name": "inserter",
     "category": "crafting",
@@ -2447,6 +2380,32 @@
     "hidden": false,
     "energy": 0.5,
     "order": "b[inserter]"
+  },
+  "iron-axe": {
+    "name": "iron-axe",
+    "category": "crafting",
+    "products": [
+      {
+        "type": "item",
+        "name": "iron-axe",
+        "amount": 1
+      }
+    ],
+    "ingredients": [
+      {
+        "type": "item",
+        "amount": 3,
+        "name": "iron-plate"
+      },
+      {
+        "type": "item",
+        "amount": 2,
+        "name": "iron-stick"
+      }
+    ],
+    "hidden": false,
+    "energy": 0.5,
+    "order": "a[mining]-a[iron-axe]"
   },
   "iron-chest": {
     "name": "iron-chest",
@@ -2508,7 +2467,7 @@
       }
     ],
     "hidden": false,
-    "energy": 3.2,
+    "energy": 3.5,
     "order": "b[iron-plate]"
   },
   "iron-stick": {
@@ -2915,32 +2874,6 @@
     "energy": 0.5,
     "order": "a[robot]-a[logistic-robot]"
   },
-  "logistic-science-pack": {
-    "name": "logistic-science-pack",
-    "category": "crafting",
-    "products": [
-      {
-        "type": "item",
-        "name": "logistic-science-pack",
-        "amount": 1
-      }
-    ],
-    "ingredients": [
-      {
-        "type": "item",
-        "amount": 1,
-        "name": "transport-belt"
-      },
-      {
-        "type": "item",
-        "amount": 1,
-        "name": "inserter"
-      }
-    ],
-    "hidden": false,
-    "energy": 6,
-    "order": "b[logistic-science-pack]"
-  },
   "long-handed-inserter": {
     "name": "long-handed-inserter",
     "category": "crafting",
@@ -2985,12 +2918,12 @@
     "ingredients": [
       {
         "type": "item",
-        "amount": 20,
+        "amount": 5,
         "name": "copper-plate"
       },
       {
         "type": "item",
-        "amount": 2,
+        "amount": 10,
         "name": "steel-plate"
       },
       {
@@ -3000,7 +2933,7 @@
       }
     ],
     "hidden": false,
-    "energy": 20,
+    "energy": 30,
     "order": "o[rocket-structure]"
   },
   "lubricant": {
@@ -3044,11 +2977,6 @@
         "type": "item",
         "amount": 2,
         "name": "steel-plate"
-      },
-      {
-        "type": "item",
-        "amount": 4,
-        "name": "iron-stick"
       }
     ],
     "hidden": false,
@@ -3078,13 +3006,13 @@
       },
       {
         "type": "item",
-        "amount": 2,
-        "name": "stone-wall"
+        "amount": 1,
+        "name": "gun-turret"
       }
     ],
     "hidden": false,
     "energy": 10,
-    "order": "c[military-science-pack]"
+    "order": "d[military-science-pack]"
   },
   "modular-armor": {
     "name": "modular-armor",
@@ -3161,7 +3089,7 @@
       }
     ],
     "hidden": false,
-    "energy": 90,
+    "energy": 60,
     "order": "q[uranium-rocket-fuel]"
   },
   "nuclear-reactor": {
@@ -3285,13 +3213,13 @@
     "ingredients": [
       {
         "type": "item",
-        "amount": 20,
-        "name": "processing-unit"
+        "amount": 5,
+        "name": "steel-plate"
       },
       {
         "type": "item",
-        "amount": 5,
-        "name": "low-density-structure"
+        "amount": 1,
+        "name": "processing-unit"
       },
       {
         "type": "item",
@@ -3354,11 +3282,6 @@
         "type": "item",
         "amount": 100,
         "name": "processing-unit"
-      },
-      {
-        "type": "item",
-        "amount": 20,
-        "name": "low-density-structure"
       },
       {
         "type": "item",
@@ -3637,28 +3560,23 @@
     "ingredients": [
       {
         "type": "item",
-        "amount": 60,
-        "name": "processing-unit"
+        "amount": 40,
+        "name": "steel-plate"
       },
       {
         "type": "item",
         "amount": 40,
-        "name": "electric-engine-unit"
+        "name": "processing-unit"
       },
       {
         "type": "item",
-        "amount": 30,
-        "name": "low-density-structure"
+        "amount": 5,
+        "name": "speed-module-3"
       },
       {
         "type": "item",
-        "amount": 25,
-        "name": "speed-module-2"
-      },
-      {
-        "type": "item",
-        "amount": 25,
-        "name": "effectivity-module-2"
+        "amount": 5,
+        "name": "effectivity-module-3"
       }
     ],
     "hidden": false,
@@ -3734,28 +3652,23 @@
       {
         "type": "item",
         "name": "production-science-pack",
-        "amount": 3
+        "amount": 2
       }
     ],
     "ingredients": [
       {
         "type": "item",
-        "amount": 30,
-        "name": "rail"
+        "amount": 1,
+        "name": "electric-engine-unit"
       },
       {
         "type": "item",
         "amount": 1,
         "name": "electric-furnace"
-      },
-      {
-        "type": "item",
-        "amount": 1,
-        "name": "productivity-module"
       }
     ],
     "hidden": false,
-    "energy": 21,
+    "energy": 14,
     "order": "e[production-science-pack]"
   },
   "productivity-module": {
@@ -3859,18 +3772,13 @@
     "ingredients": [
       {
         "type": "item",
-        "amount": 3,
+        "amount": 5,
         "name": "iron-plate"
       },
       {
         "type": "item",
         "amount": 5,
         "name": "copper-cable"
-      },
-      {
-        "type": "item",
-        "amount": 4,
-        "name": "iron-stick"
       },
       {
         "type": "item",
@@ -4492,6 +4400,89 @@
     "energy": 5,
     "order": "m[satellite]"
   },
+  "science-pack-1": {
+    "name": "science-pack-1",
+    "category": "crafting",
+    "products": [
+      {
+        "type": "item",
+        "name": "science-pack-1",
+        "amount": 1
+      }
+    ],
+    "ingredients": [
+      {
+        "type": "item",
+        "amount": 1,
+        "name": "copper-plate"
+      },
+      {
+        "type": "item",
+        "amount": 1,
+        "name": "iron-gear-wheel"
+      }
+    ],
+    "hidden": false,
+    "energy": 5,
+    "order": "a[science-pack-1]"
+  },
+  "science-pack-2": {
+    "name": "science-pack-2",
+    "category": "crafting",
+    "products": [
+      {
+        "type": "item",
+        "name": "science-pack-2",
+        "amount": 1
+      }
+    ],
+    "ingredients": [
+      {
+        "type": "item",
+        "amount": 1,
+        "name": "transport-belt"
+      },
+      {
+        "type": "item",
+        "amount": 1,
+        "name": "inserter"
+      }
+    ],
+    "hidden": false,
+    "energy": 6,
+    "order": "b[science-pack-2]"
+  },
+  "science-pack-3": {
+    "name": "science-pack-3",
+    "category": "crafting",
+    "products": [
+      {
+        "type": "item",
+        "name": "science-pack-3",
+        "amount": 1
+      }
+    ],
+    "ingredients": [
+      {
+        "type": "item",
+        "amount": 1,
+        "name": "advanced-circuit"
+      },
+      {
+        "type": "item",
+        "amount": 1,
+        "name": "engine-unit"
+      },
+      {
+        "type": "item",
+        "amount": 1,
+        "name": "electric-mining-drill"
+      }
+    ],
+    "hidden": false,
+    "energy": 12,
+    "order": "c[science-pack-3]"
+  },
   "shotgun": {
     "name": "shotgun",
     "category": "crafting",
@@ -4598,7 +4589,7 @@
     "ingredients": [
       {
         "type": "item",
-        "amount": 1,
+        "amount": 2,
         "name": "wood"
       },
       {
@@ -4630,7 +4621,7 @@
       {
         "type": "item",
         "amount": 3,
-        "name": "copper-cable"
+        "name": "iron-stick"
       },
       {
         "type": "item",
@@ -4727,12 +4718,12 @@
       },
       {
         "type": "item",
-        "amount": 2,
+        "amount": 1,
         "name": "advanced-circuit"
       },
       {
         "type": "item",
-        "amount": 1,
+        "amount": 5,
         "name": "solar-panel"
       }
     ],
@@ -4983,6 +4974,32 @@
     "energy": 3,
     "order": "b[steam-power]-c[steam-turbine]"
   },
+  "steel-axe": {
+    "name": "steel-axe",
+    "category": "crafting",
+    "products": [
+      {
+        "type": "item",
+        "name": "steel-axe",
+        "amount": 1
+      }
+    ],
+    "ingredients": [
+      {
+        "type": "item",
+        "amount": 5,
+        "name": "steel-plate"
+      },
+      {
+        "type": "item",
+        "amount": 2,
+        "name": "iron-stick"
+      }
+    ],
+    "hidden": false,
+    "energy": 0.5,
+    "order": "a[mining]-b[steel-axe]"
+  },
   "steel-chest": {
     "name": "steel-chest",
     "category": "crafting",
@@ -5048,7 +5065,7 @@
       }
     ],
     "hidden": false,
-    "energy": 16,
+    "energy": 17.5,
     "order": "d[steel-plate]"
   },
   "stone-brick": {
@@ -5069,7 +5086,7 @@
       }
     ],
     "hidden": false,
-    "energy": 3.2,
+    "energy": 3.5,
     "order": "a[stone-brick]"
   },
   "stone-furnace": {
@@ -5308,18 +5325,13 @@
     "ingredients": [
       {
         "type": "item",
-        "amount": 6,
+        "amount": 10,
         "name": "iron-plate"
       },
       {
         "type": "item",
         "amount": 3,
         "name": "steel-plate"
-      },
-      {
-        "type": "item",
-        "amount": 6,
-        "name": "iron-stick"
       },
       {
         "type": "item",
@@ -5466,36 +5478,26 @@
     "energy": 10,
     "order": "a[basic-clips]-c[uranium-rounds-magazine]"
   },
-  "utility-science-pack": {
-    "name": "utility-science-pack",
+  "wood": {
+    "name": "wood",
     "category": "crafting",
     "products": [
       {
         "type": "item",
-        "name": "utility-science-pack",
-        "amount": 3
+        "name": "wood",
+        "amount": 2
       }
     ],
     "ingredients": [
       {
         "type": "item",
-        "amount": 2,
-        "name": "processing-unit"
-      },
-      {
-        "type": "item",
         "amount": 1,
-        "name": "flying-robot-frame"
-      },
-      {
-        "type": "item",
-        "amount": 3,
-        "name": "low-density-structure"
+        "name": "raw-wood"
       }
     ],
     "hidden": false,
-    "energy": 21,
-    "order": "f[utility-science-pack]"
+    "energy": 0.5,
+    "order": "a[wood]"
   },
   "wooden-chest": {
     "name": "wooden-chest",
@@ -5510,7 +5512,7 @@
     "ingredients": [
       {
         "type": "item",
-        "amount": 2,
+        "amount": 4,
         "name": "wood"
       }
     ],
@@ -5592,18 +5594,17 @@
       {
         "type": "fluid",
         "name": "heavy-oil",
-        "amount": 90,
-        "catalyst_amount": 25
+        "amount": 35
       },
       {
         "type": "fluid",
         "name": "light-oil",
-        "amount": 20
+        "amount": 15
       },
       {
         "type": "fluid",
         "name": "petroleum-gas",
-        "amount": 10
+        "amount": 20
       }
     ],
     "ingredients": [
@@ -5615,8 +5616,7 @@
       {
         "type": "fluid",
         "amount": 25,
-        "name": "heavy-oil",
-        "catalyst_amount": 25
+        "name": "heavy-oil"
       },
       {
         "type": "fluid",
@@ -5635,22 +5635,19 @@
       {
         "type": "item",
         "name": "crude-oil-barrel",
-        "amount": 1,
-        "catalyst_amount": 1
+        "amount": 1
       }
     ],
     "ingredients": [
       {
         "type": "item",
         "amount": 1,
-        "name": "empty-barrel",
-        "catalyst_amount": 1
+        "name": "empty-barrel"
       },
       {
         "type": "fluid",
         "amount": 50,
-        "name": "crude-oil",
-        "catalyst_amount": 50
+        "name": "crude-oil"
       }
     ],
     "hidden": false,
@@ -5664,22 +5661,19 @@
       {
         "type": "item",
         "name": "heavy-oil-barrel",
-        "amount": 1,
-        "catalyst_amount": 1
+        "amount": 1
       }
     ],
     "ingredients": [
       {
         "type": "item",
         "amount": 1,
-        "name": "empty-barrel",
-        "catalyst_amount": 1
+        "name": "empty-barrel"
       },
       {
         "type": "fluid",
         "amount": 50,
-        "name": "heavy-oil",
-        "catalyst_amount": 50
+        "name": "heavy-oil"
       }
     ],
     "hidden": false,
@@ -5693,22 +5687,19 @@
       {
         "type": "item",
         "name": "light-oil-barrel",
-        "amount": 1,
-        "catalyst_amount": 1
+        "amount": 1
       }
     ],
     "ingredients": [
       {
         "type": "item",
         "amount": 1,
-        "name": "empty-barrel",
-        "catalyst_amount": 1
+        "name": "empty-barrel"
       },
       {
         "type": "fluid",
         "amount": 50,
-        "name": "light-oil",
-        "catalyst_amount": 50
+        "name": "light-oil"
       }
     ],
     "hidden": false,
@@ -5722,22 +5713,19 @@
       {
         "type": "item",
         "name": "lubricant-barrel",
-        "amount": 1,
-        "catalyst_amount": 1
+        "amount": 1
       }
     ],
     "ingredients": [
       {
         "type": "item",
         "amount": 1,
-        "name": "empty-barrel",
-        "catalyst_amount": 1
+        "name": "empty-barrel"
       },
       {
         "type": "fluid",
         "amount": 50,
-        "name": "lubricant",
-        "catalyst_amount": 50
+        "name": "lubricant"
       }
     ],
     "hidden": false,
@@ -5751,22 +5739,19 @@
       {
         "type": "item",
         "name": "petroleum-gas-barrel",
-        "amount": 1,
-        "catalyst_amount": 1
+        "amount": 1
       }
     ],
     "ingredients": [
       {
         "type": "item",
         "amount": 1,
-        "name": "empty-barrel",
-        "catalyst_amount": 1
+        "name": "empty-barrel"
       },
       {
         "type": "fluid",
         "amount": 50,
-        "name": "petroleum-gas",
-        "catalyst_amount": 50
+        "name": "petroleum-gas"
       }
     ],
     "hidden": false,
@@ -5780,22 +5765,19 @@
       {
         "type": "item",
         "name": "sulfuric-acid-barrel",
-        "amount": 1,
-        "catalyst_amount": 1
+        "amount": 1
       }
     ],
     "ingredients": [
       {
         "type": "item",
         "amount": 1,
-        "name": "empty-barrel",
-        "catalyst_amount": 1
+        "name": "empty-barrel"
       },
       {
         "type": "fluid",
         "amount": 50,
-        "name": "sulfuric-acid",
-        "catalyst_amount": 50
+        "name": "sulfuric-acid"
       }
     ],
     "hidden": false,
@@ -5809,22 +5791,19 @@
       {
         "type": "item",
         "name": "water-barrel",
-        "amount": 1,
-        "catalyst_amount": 1
+        "amount": 1
       }
     ],
     "ingredients": [
       {
         "type": "item",
         "amount": 1,
-        "name": "empty-barrel",
-        "catalyst_amount": 1
+        "name": "empty-barrel"
       },
       {
         "type": "fluid",
         "amount": 50,
-        "name": "water",
-        "catalyst_amount": 50
+        "name": "water"
       }
     ],
     "hidden": false,
@@ -5854,7 +5833,7 @@
       }
     ],
     "hidden": false,
-    "energy": 2,
+    "energy": 3,
     "order": "b[fluid-chemistry]-a[heavy-oil-cracking]"
   },
   "light-oil-cracking": {
@@ -5880,7 +5859,7 @@
       }
     ],
     "hidden": false,
-    "energy": 2,
+    "energy": 3,
     "order": "b[fluid-chemistry]-b[light-oil-cracking]"
   },
   "solid-fuel-from-light-oil": {
@@ -5901,7 +5880,7 @@
       }
     ],
     "hidden": false,
-    "energy": 2,
+    "energy": 3,
     "order": "b[fluid-chemistry]-c[solid-fuel-from-light-oil]"
   },
   "solid-fuel-from-petroleum-gas": {
@@ -5922,7 +5901,7 @@
       }
     ],
     "hidden": false,
-    "energy": 2,
+    "energy": 3,
     "order": "b[fluid-chemistry]-d[solid-fuel-from-petroleum-gas]"
   },
   "solid-fuel-from-heavy-oil": {
@@ -5943,7 +5922,7 @@
       }
     ],
     "hidden": false,
-    "energy": 2,
+    "energy": 3,
     "order": "b[fluid-chemistry]-e[solid-fuel-from-heavy-oil]"
   },
   "empty-crude-oil-barrel": {
@@ -5953,22 +5932,19 @@
       {
         "type": "item",
         "name": "empty-barrel",
-        "amount": 1,
-        "catalyst_amount": 1
+        "amount": 1
       },
       {
         "type": "fluid",
         "name": "crude-oil",
-        "amount": 50,
-        "catalyst_amount": 50
+        "amount": 50
       }
     ],
     "ingredients": [
       {
         "type": "item",
         "amount": 1,
-        "name": "crude-oil-barrel",
-        "catalyst_amount": 1
+        "name": "crude-oil-barrel"
       }
     ],
     "hidden": false,
@@ -5982,22 +5958,19 @@
       {
         "type": "item",
         "name": "empty-barrel",
-        "amount": 1,
-        "catalyst_amount": 1
+        "amount": 1
       },
       {
         "type": "fluid",
         "name": "heavy-oil",
-        "amount": 50,
-        "catalyst_amount": 50
+        "amount": 50
       }
     ],
     "ingredients": [
       {
         "type": "item",
         "amount": 1,
-        "name": "heavy-oil-barrel",
-        "catalyst_amount": 1
+        "name": "heavy-oil-barrel"
       }
     ],
     "hidden": false,
@@ -6011,22 +5984,19 @@
       {
         "type": "item",
         "name": "empty-barrel",
-        "amount": 1,
-        "catalyst_amount": 1
+        "amount": 1
       },
       {
         "type": "fluid",
         "name": "light-oil",
-        "amount": 50,
-        "catalyst_amount": 50
+        "amount": 50
       }
     ],
     "ingredients": [
       {
         "type": "item",
         "amount": 1,
-        "name": "light-oil-barrel",
-        "catalyst_amount": 1
+        "name": "light-oil-barrel"
       }
     ],
     "hidden": false,
@@ -6040,22 +6010,19 @@
       {
         "type": "item",
         "name": "empty-barrel",
-        "amount": 1,
-        "catalyst_amount": 1
+        "amount": 1
       },
       {
         "type": "fluid",
         "name": "lubricant",
-        "amount": 50,
-        "catalyst_amount": 50
+        "amount": 50
       }
     ],
     "ingredients": [
       {
         "type": "item",
         "amount": 1,
-        "name": "lubricant-barrel",
-        "catalyst_amount": 1
+        "name": "lubricant-barrel"
       }
     ],
     "hidden": false,
@@ -6069,22 +6036,19 @@
       {
         "type": "item",
         "name": "empty-barrel",
-        "amount": 1,
-        "catalyst_amount": 1
+        "amount": 1
       },
       {
         "type": "fluid",
         "name": "petroleum-gas",
-        "amount": 50,
-        "catalyst_amount": 50
+        "amount": 50
       }
     ],
     "ingredients": [
       {
         "type": "item",
         "amount": 1,
-        "name": "petroleum-gas-barrel",
-        "catalyst_amount": 1
+        "name": "petroleum-gas-barrel"
       }
     ],
     "hidden": false,
@@ -6098,22 +6062,19 @@
       {
         "type": "item",
         "name": "empty-barrel",
-        "amount": 1,
-        "catalyst_amount": 1
+        "amount": 1
       },
       {
         "type": "fluid",
         "name": "sulfuric-acid",
-        "amount": 50,
-        "catalyst_amount": 50
+        "amount": 50
       }
     ],
     "ingredients": [
       {
         "type": "item",
         "amount": 1,
-        "name": "sulfuric-acid-barrel",
-        "catalyst_amount": 1
+        "name": "sulfuric-acid-barrel"
       }
     ],
     "hidden": false,
@@ -6127,22 +6088,19 @@
       {
         "type": "item",
         "name": "empty-barrel",
-        "amount": 1,
-        "catalyst_amount": 1
+        "amount": 1
       },
       {
         "type": "fluid",
         "name": "water",
-        "amount": 50,
-        "catalyst_amount": 50
+        "amount": 50
       }
     ],
     "ingredients": [
       {
         "type": "item",
         "amount": 1,
-        "name": "water-barrel",
-        "catalyst_amount": 1
+        "name": "water-barrel"
       }
     ],
     "hidden": false,
@@ -6176,7 +6134,7 @@
       }
     ],
     "hidden": false,
-    "energy": 12,
+    "energy": 10,
     "order": "k[uranium-processing]"
   },
   "nuclear-fuel-reprocessing": {
@@ -6197,7 +6155,7 @@
       }
     ],
     "hidden": false,
-    "energy": 60,
+    "energy": 50,
     "order": "r[uranium-processing]-b[nuclear-fuel-reprocessing]"
   },
   "kovarex-enrichment-process": {
@@ -6207,32 +6165,28 @@
       {
         "type": "item",
         "name": "uranium-235",
-        "amount": 41,
-        "catalyst_amount": 40
+        "amount": 41
       },
       {
         "type": "item",
         "name": "uranium-238",
-        "amount": 2,
-        "catalyst_amount": 2
+        "amount": 2
       }
     ],
     "ingredients": [
       {
         "type": "item",
         "amount": 40,
-        "name": "uranium-235",
-        "catalyst_amount": 40
+        "name": "uranium-235"
       },
       {
         "type": "item",
         "amount": 5,
-        "name": "uranium-238",
-        "catalyst_amount": 2
+        "name": "uranium-238"
       }
     ],
     "hidden": false,
-    "energy": 60,
+    "energy": 50,
     "order": "r[uranium-processing]-c[kovarex-enrichment-process]"
   }
 }

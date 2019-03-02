@@ -1,9 +1,10 @@
-package love.sola.factorio.mallbuilder
+package love.sola.factorio
 
 import javafx.beans.property.SimpleListProperty
 import javafx.scene.Parent
 import javafx.scene.input.KeyCode
 import javafx.scene.layout.Priority
+import love.sola.factorio.data.Recipe
 import tornadofx.*
 
 class MainView : View("Mall Builder") {
@@ -90,7 +91,13 @@ class MainView : View("Mall Builder") {
                 }
                 button("Visualize") {
                     action {
-                        find<ImagePopup>(mapOf(ImagePopup::image to genDAG(selectedRecipes)))
+                        find<ImagePopup>(
+                            mapOf(
+                                ImagePopup::image to genDAG(
+                                    selectedRecipes
+                                )
+                            )
+                        )
                             .openModal()
                     }
                 }

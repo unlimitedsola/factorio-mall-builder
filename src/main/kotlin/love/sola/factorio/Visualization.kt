@@ -1,4 +1,4 @@
-package love.sola.factorio.mallbuilder
+package love.sola.factorio
 
 import guru.nidi.graphviz.attribute.Label
 import guru.nidi.graphviz.attribute.Shape
@@ -7,6 +7,7 @@ import guru.nidi.graphviz.engine.Graphviz
 import guru.nidi.graphviz.model.Factory
 import javafx.embed.swing.SwingFXUtils
 import javafx.scene.image.Image
+import love.sola.factorio.data.Recipe
 import kotlin.math.roundToInt
 
 fun genDAG(recipes: List<Recipe>): Image {
