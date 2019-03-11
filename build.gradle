@@ -22,7 +22,7 @@ compileTestKotlin {
     kotlinOptions.jvmTarget = "1.8"
 }
 
-mainClassName = 'love.sola.factorio.mallbuilder.MallBuilderKt'
+mainClassName = 'love.sola.factorio.MallBuilderKt'
 
 repositories {
     mavenCentral()
