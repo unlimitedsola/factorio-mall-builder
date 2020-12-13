@@ -18,12 +18,15 @@ data class Ingredient(val type: String, val name: String, val amount: Int, val c
 }
 
 data class Product(
-    val type: String, val name: String, val amount: Int?, val catalyst_amount: Int?,
-    val amount_min: Int?, val amount_max: Int?, val probability: Int?
+    val type: String,
+    val name: String,
+    val amount: Int?,
+    val catalyst_amount: Int?,
+    val probability: Double?
 ) {
     fun formatSimple(): String = if (amount != null) {
         "$name x $amount"
     } else {
-        "$name x $amount_min-$amount_max"
+        "$name x $amount ($probability)"
     }
 }
