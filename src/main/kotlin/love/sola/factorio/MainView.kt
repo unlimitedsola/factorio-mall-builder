@@ -4,30 +4,31 @@ import javafx.beans.property.SimpleListProperty
 import javafx.scene.Parent
 import javafx.scene.input.KeyCode
 import javafx.scene.layout.Priority
+import love.sola.factorio.data.Product
 import love.sola.factorio.data.Recipe
 import tornadofx.*
 
 class MainView : View("Mall Builder") {
 
-    private val preferredRecipe = observableList<Recipe>()
-    private val selectedRecipes = observableList<Recipe>()
+    private val preferredRecipe = observableListOf<Recipe>()
+    private val selectedRecipes = observableListOf<Recipe>()
     private val ingredientsProperty = SimpleListProperty<Pair<String, String>>().apply {
         selectedRecipes.onChange {
-            val ingredients = flatIngredients(selectedRecipes).entries.sortedBy { it.value }
-            value = ingredients.map {
+            val ingredients = flatIngredients(selectedRecipes).entries.sortedBy(Map.Entry<String, Int>::value)
+            value = ingredients.map { entry ->
                 val profit = try {
-                    flatIngredients(selectedRecipes + chooseRecipe(it.key)).size - ingredients.size
+                    flatIngredients(selectedRecipes + chooseRecipe(entry.key)).size - ingredients.size
                 } catch (e: Exception) {
                     "-"
                 }
-                it.key to "${it.key} (${it.value}) ($profit)"
-            }.observable()
+                entry.key to "${entry.key} (${entry.value}) ($profit)"
+            }.asObservable()
         }
     }
 
     override val root: Parent = gridpane {
         hgap = 10.0
-        padding = tornadofx.insets(10)
+        padding = insets(10)
         row {
             constraintsForRow(0).vgrow = Priority.ALWAYS
             vbox {
@@ -55,12 +56,13 @@ class MainView : View("Mall Builder") {
                 label(selectedRecipes.sizeProperty.stringBinding { "Chosen Recipes: $it" })
                 hbox(spacing = 10) {
                     val searchBar =
-                        combobox<String>(values = recipes.flatMap { it.value.products.map { it.name } }.observable()) {
+                        combobox<String>(values = recipes.flatMap { it.value.products.map(Product::name) }
+                            .asObservable()) {
                             hgrow = Priority.ALWAYS
                             maxWidth = Double.MAX_VALUE
                             makeAutocompletable()
-                            setOnKeyPressed {
-                                if (it.code == KeyCode.ENTER) {
+                            setOnKeyPressed { event ->
+                                if (event.code == KeyCode.ENTER) {
                                     selectedRecipes.add(chooseRecipe(value))
                                 }
                             }
@@ -76,10 +78,10 @@ class MainView : View("Mall Builder") {
                 }
                 listview(selectedRecipes) {
                     vgrow = Priority.ALWAYS
-                    cellFormat {
-                        text = it.products.joinToString(separator = ", ") { it.name }
-                        setOnMouseClicked { _ ->
-                            selectedRecipes.remove(it)
+                    cellFormat { recipe ->
+                        text = recipe.products.joinToString(separator = ", ") { it.name }
+                        setOnMouseClicked {
+                            selectedRecipes.remove(recipe)
                         }
                     }
                 }
@@ -97,17 +99,16 @@ class MainView : View("Mall Builder") {
                                     selectedRecipes
                                 )
                             )
-                        )
-                            .openModal()
+                        ).openModal()
                     }
                 }
                 label(preferredRecipe.sizeProperty.stringBinding { "Preferred Recipes: $it" })
                 listview(preferredRecipe) {
                     vgrow = Priority.ALWAYS
-                    cellFormat {
-                        text = "${it.name}: ${it.formatSimple()}"
-                        setOnMouseClicked { _ ->
-                            preferredRecipe.remove(it)
+                    cellFormat { recipe ->
+                        text = "${recipe.name}: ${recipe.formatSimple()}"
+                        setOnMouseClicked {
+                            preferredRecipe.remove(recipe)
                         }
                     }
                 }
@@ -115,7 +116,7 @@ class MainView : View("Mall Builder") {
         }
     }
 
-    fun flatIngredients(selectedRecipes: List<Recipe>): Map<String, Int> {
+    private fun flatIngredients(selectedRecipes: List<Recipe>): Map<String, Int> {
         val producible = selectedRecipes.flatMap { it.products }.map { it.name }.distinct()
         return selectedRecipes.flatMap { it.ingredients }.map { it.name }
             .filter { !producible.contains(it) }
@@ -125,13 +126,13 @@ class MainView : View("Mall Builder") {
             }
     }
 
-    fun chooseRecipe(item: String): Recipe {
-        val cachedRecipe = preferredRecipe.find { it.products.map { it.name }.contains(item) }
+    private fun chooseRecipe(item: String): Recipe {
+        val cachedRecipe = preferredRecipe.find { r -> r.products.map(Product::name).contains(item) }
         if (cachedRecipe != null) {
             return cachedRecipe
         }
-        val availableRecipes: List<Recipe> = recipes.values.filter {
-            it.products.map { it.name }.contains(item)
+        val availableRecipes: List<Recipe> = recipes.values.filter { recipe ->
+            recipe.products.map(Product::name).contains(item)
         }
         if (availableRecipes.isEmpty()) {
             throw RuntimeException("no recipe for item: $item")
@@ -150,5 +151,4 @@ class MainView : View("Mall Builder") {
         preferredRecipe.add(chosenRecipe)
         return chosenRecipe
     }
-
 }
